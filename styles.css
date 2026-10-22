@@ -1,0 +1,125 @@
+/* ============================================
+   Portfolio Serigne Malick – styles.css
+   ============================================ */
+
+/* --- Réinitialisation et dimensionnement des boîtes --- */
+/* J’utilise box-sizing: border-box pour que le padding et la bordure
+   soient inclus dans la largeur/hauteur totale des éléments.
+   Cela évite les débordements et simplifie le calcul des dimensions. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Variables de couleurs (cohérence globale) --- */
+:root {
+  --couleur-principale: #1a365d;   /* Bleu foncé */
+  --couleur-accent: #2b6cb0;       /* Bleu moyen */
+  --couleur-fond: #f7fafc;         /* Gris très clair */
+  --couleur-texte: #2d3748;        /* Gris foncé lisible */
+  --couleur-claire: #ffffff;
+}
+
+/* --- Styles de base du body --- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+}
+
+/* --- En-tête --- */
+header {
+  background-color: var(--couleur-principale);
+  color: var(--couleur-claire);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+/* Sélecteur d’ID */
+#nom {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* --- Navigation horizontale --- */
+nav ul {
+  list-style: none;
+  display: flex;                 /* Met les liens sur une seule ligne */
+  justify-content: center;
+  gap: 2rem;                     /* Espace régulier entre les liens */
+}
+
+/* Sélecteur descendant (nav a) */
+nav a {
+  color: var(--couleur-claire);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--couleur-accent);
+}
+
+/* --- Sections générales --- */
+/* Sélecteur de classe */
+.section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--couleur-claire);
+  /* Espacement + bordure demandés */
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Titres --- */
+h2 {
+  color: var(--couleur-principale);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--couleur-accent);
+  padding-bottom: 0.4rem;
+}
+
+h3 {
+  color: var(--couleur-accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Paragraphes --- */
+p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+/* --- Projets --- */
+.projet {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--couleur-accent);
+}
+
+/* --- Contact --- */
+.email {
+  font-weight: bold;
+  color: var(--couleur-accent);
+  font-size: 1.1rem;
+}
+
+/* --- Pied de page --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--couleur-principale);
+  color: var(--couleur-claire);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
